@@ -1,0 +1,6 @@
+{
+  "name": "Brownkiss ERP",
+  "description": "Dasbor ERP modern untuk manajemen produksi, resep, stok bahan baku, dan kasir penjualan Brownkiss.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

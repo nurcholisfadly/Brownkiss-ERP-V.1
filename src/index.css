@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ink: #3A2319;
+  --color-ink-soft: #614B3E;
+  --color-muted: #9E8A78;
+  --color-hairline: #E5DCD0;
+  --color-cream: #FAF6F0;
+  --color-panel-dark: #28160E;
+  --color-panel-dark-2: #311C13;
+  --color-glaze: #7A3E2B;
+  --color-glaze-light: #A2583E;
+  --color-pistachio: #5B8A68;
+  --color-amber: #C67D42;
+  --color-error: #B03E2B;
+}
+
+body {
+  background-color: #FAF6F0;
+  color: #3A2319;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom styles mapping the exact CSS styles from Brownkiss ERP */
+.brand-word {
+  font-family: "Fraunces", serif;
+  font-weight: 450;
+  font-size: 17.5px;
+  letter-spacing: 0.01em;
+}
+
+.brand-word b {
+  font-weight: 600;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCD2C3;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Custom button styles */
+.btn-primary {
+  padding: 10px 16px;
+  border-radius: 9px;
+  border: none;
+  background-color: #3A2319;
+  color: #FAF6F0;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #4D2F22;
+}
+
+.btn-ghost {
+  padding: 9px 14px;
+  border-radius: 9px;
+  border: 1.5px solid #E5DCD0;
+  background-color: #fff;
+  color: #3A2319;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: #7A3E2B;
+  color: #7A3E2B;
+}
+
+/* Table styles */
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9E8A78;
+  font-weight: 600;
+  padding: 0 12px 10px;
+  border-bottom: 1px solid #E5DCD0;
+}
+
+.data-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid #E5DCD0;
+  color: #3A2319;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover td {
+  background-color: #F8F3EC;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.badge.ok {
+  background-color: #EEF4EF;
+  color: #4C7A5C;
+}
+
+.badge.low {
+  background-color: #FBF1E2;
+  color: #8A5F1E;
+}
+
+.badge.crit {
+  background-color: #FBEDEA;
+  color: #B3432F;
+}
+
+.badge.progress {
+  background-color: #EFE8DC;
+  color: #614B3E;
+}
+
+.badge.done {
+  background-color: #EEF4EF;
+  color: #4C7A5C;
+}
+
+.badge.wait {
+  background-color: #F3EEE6;
+  color: #9E8A78;
+}
+
+.badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+/* Card panels */
+.panel-card {
+  background-color: #fff;
+  border: 1px solid #E5DCD0;
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.panel-title {
+  font-family: "Fraunces", serif;
+  font-size: 16.5px;
+  font-weight: 500;
+  margin: 0;
+  color: #3A2319;
+}
+
+.panel-sub {
+  font-size: 12px;
+  color: #9E8A78;
+  margin: 2px 0 0;
+}
+
+.link-more {
+  font-size: 12.5px;
+  color: #7A3E2B;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link-more:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Tailwind override resets to ensure explicit inline colors match the original exact colors */
+/* We will map custom colors perfectly inside the components too */
